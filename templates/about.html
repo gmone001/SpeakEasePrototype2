@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - EaseSpeak Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+    <img src="{{ url_for('static', filename='about_image.png') }}" alt="About Shy Chatbot" class="logo">
+    <div class="container">
+        <h1>About EaseSpeak</h1>
+        <p>
+            The EaseSpeak Chatbot is designed to help mitigate speaking anxiety and enhance language learning.
+            It provides an interactive platform for users to practice and improve their language skills
+            in a supportive environment, helping overcome the fear of speaking in a new language.
+        </p>
+        <p>
+            Our mission is to make language learning accessible and anxiety-free for everyone,
+            whether you're just starting out or looking to refine your fluency.
+        </p>
+    </div>
+</body>
+</html>

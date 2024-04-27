@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+    <img src="{{ url_for('static', filename='about_image.png') }}" alt="About Shy Chatbot" class="logo">
+    <div class="container">
+        <h1>EaseSpeak</h1>
+
+        <div class="chat-interface">
+            <input type="text" id="phraseInput" placeholder="Type a phrase or click the microphone and start speaking..." autocomplete="off">
+            <div id="autocompleteList" class="autocomplete-items"></div>
+            
+            <button id="startListeningButton" class="icon-button">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="stopListeningButton" style="display:none;">Stop Listening</button>
+            
+            <button id="translateButton">Chat Now!</button>
+            <div id="translationResult"></div>
+            <div id="speechStatus"></div>
+        </div>
+     
+        
+    </div>
+
+    <div id="voiceSupportWarning"></div>
+
+    
+</body>
+</html>
